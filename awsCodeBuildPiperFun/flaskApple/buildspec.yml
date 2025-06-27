@@ -35,7 +35,7 @@ phases:
       python: 3.11
   pre_build:
     commands:
-      - pip install -r awsCodeBuildPiperFun/flaskApple/requirements.txt
+      - pip install -r awsCodeBuildPiperFun/flaskapple/requirements.txt
   build:
     commands:
       # -build the docker
@@ -43,8 +43,8 @@ phases:
       - echo "building Docker Image"
       - echo "build tag stored in systems manager "
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/flaskApple:latest" .
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/flaskApple:latest"
+      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/flaskapple:latest" .
+      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/flaskapple:latest"
   post_build:
     commands:
       - echo "Build completed successfully!"
