@@ -10,7 +10,7 @@ db = SQLAlchemy()
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 Base = declarative_base()
-engine = create_engine('sqlite:///' + os.path.join(basedir, 'globus.db'))
+engine = create_engine('sqlite:///' + os.path.join(basedir, 'musings_db.db'))
 Base.metadata.create_all(engine)
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)

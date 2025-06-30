@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/aileennovero/Desktop/globus/redo_challenge/newenv"
+VIRTUAL_ENV="/Users/aileennovero/Desktop/musings_db/redo_challenge/newenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
