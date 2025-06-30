@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h1>Projects</h1>
+        <a href="{{url_for('projects.newproject')}}">
+            <button>Add Project</button>
+        </a>
+        <l>
+            {% for project in project %}
+            <li> {{project.project_id}} : {{project.project_name}} / Owner: {{project.owner_id}} , {{project.owner_username}}</li>
+            <a href="{{url_for('projects.editproject', project_id = project.project_id )}}">
+                Edit
+            </a>
+            <a href="{{url_for('projects.deleteproject', project_id = project.project_id )}}" style="margin-left: 10px;">
+                Delete
+            </a>
+            <h5>comments</h5>
+            {% for c in project.comments %}
+             <p>  {{c.comment}}</p>
+          
+            {% endfor %}
+            <br> <br>
+            {% endfor %}
+        </l>
+    </body>
+</html>

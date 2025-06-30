@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Edit a Comment</h1>
+        <form action="{{ url_for('comments.editcomment',comment_id = comment.comment_id)}}" method="post">
+            <div class="form-group">
+                <label for="Comment">Comment:</label>
+                <input type="text" class="form-control" name="comment" value="{{comment.comment }}">
+                <button type="submit"> SAVE</button>
+                <a href='{{url_for('comments.showcomments')}}'>
+                    <button>Cancel</button>
+                </a>
+            </div>
+         </form>
+    </body>
+</html>

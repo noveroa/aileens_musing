@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>Edit a project</h1>
+        <form action="{{ url_for('projects.editproject',project_id = project.project_id)}}" method="post">
+            <div class="form-group">
+                <label for="project_name">project_name:</label>
+                <input type="text" class="form-control" name="project_name" value="{{project.project_name }}">
+                <label for="owner_id">project_name:</label>
+                <input type="text" class="form-control" name="owner_id" value="{{project.owner_id }}">
+                <label for="owner_username">project_name:</label>
+                <input type="text" class="form-control" name="owner_username" value="{{project.owner_username }}">
+                <button type="submit"> SAVE</button>
+                <a href='{{url_for('projects.showprojects')}}'>
+                    <button>Cancel</button>
+                </a>
+            </div>
+         </form>
+    </body>
+</html>

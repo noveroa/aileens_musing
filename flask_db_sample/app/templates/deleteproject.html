@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h1>Delete Project</h1>
+        <p>Are you sure you want to delete the following project?</p>
+        <p>Project Name: {{project.project_name}}</p>
+        <form action="{{ url_for('projects.deleteproject', project_id=project.project_id) }}" method="post">
+            <button type="submit">Delete</button>
+            <a href='{{ url_for('projects.showprojects') }}'>
+                <button>Cancel</button>
+            </a>
+        </form>
+    </body>
+</html>

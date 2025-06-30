@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h1>Delete Comment</h1>
+        <p>Are you sure you want to delete the following comment?</p>
+        <p>comment: {{comment.comment}}</p>
+        <form action="{{ url_for('comments.deletecomment', comment_id=comment.comment_id) }}" method="post">
+            <button type="submit">Delete</button>
+            <a href='{{ url_for('comments.showcomments') }}'>
+                <button>Cancel</button>
+            </a>
+        </form>
+    </body>
+</html>

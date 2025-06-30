@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>Comments</h1>
+        <a href="{{url_for('comments.newcomment')}}">
+            <button>Add Comment</button>
+        </a>
+        <ol>
+            {% for comment in comments %}
+            <li>{{comment.comment_id}} by {{comment.commenter_id}} for {{comment.p_name}} </li>
+            <h6>{{comment.comment}}</h6>
+            <a href="{{url_for('comments.editcomment', comment_id = comment.comment_id )}}">
+                Edit
+            </a>
+            <a href="{{url_for('comments.deletecomment', comment_id = comment.comment_id )}}" style="margin-left: 10px;">
+                Delete
+            </a>
+            <br> <br>
+            {% endfor %}
+        </ol>
+    </body>
+</html>
