@@ -15,9 +15,9 @@ env:
 #   git-credential-helper: no | yes
 
   parameter-store:
-    DOCKER_REGISTRY_USERNAME: /musings/docker-credentials/username
-    DOCKER_REGISTRY_PASSWORD: /musings/docker-credentials/password
-    DOCKER_REGISTRY_URL: /musings/docker-credentials/url
+    DOCKER_REGISTRY_USERNAME: /myapp/docker-credentials/username
+    DOCKER_REGISTRY_PASSWORD: /myapp/docker-credentials/password
+    DOCKER_REGISTRY_URL: /myapp/docker-registry/url
 # proxy:
 #   upload-artifacts: no | yes
 #   logs: no | yes
@@ -35,16 +35,16 @@ phases:
       python: 3.11
   pre_build:
     commands:
-      - pip install -r awsCodeBuildPiperFun/flaskapple/requirements.txt
+      - echo "Installing dependencies..."
+      - pip install -r day-13/simple-python-app/requirements.txt
   build:
     commands:
-      # -build the docker
-      - cd awsCodeBuildPiperFun
-      - echo "building Docker Image"
-      - echo "build tag stored in systems manager "
+      - echo "Running tests..."
+      - cd day-13/simple-python-app/
+      - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/flaskapple:latest" .
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/flaskapple:latest"
+      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
+      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
   post_build:
     commands:
       - echo "Build completed successfully!"
