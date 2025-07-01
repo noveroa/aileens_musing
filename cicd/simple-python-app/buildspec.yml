@@ -35,7 +35,7 @@ phases:
       python: 3.11
   pre_build:
     commands:
-      - echo "Installing dependencies..."
+      - echo "Installing dependencies...."
       - pip install -r cicd/simple-python-app/requirements.txt
   build:
     commands:
