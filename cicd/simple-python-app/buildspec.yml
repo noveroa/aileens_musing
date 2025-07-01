@@ -41,7 +41,7 @@ phases:
     commands:
       - echo "Running tests..."
       - cd cicd/simple-python-app/
-      - echo "Login in to Docker & Authenticate"
+      - echo "Login in to Docker & Authenticate, please"
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
       - echo "Building Docker image..."
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
