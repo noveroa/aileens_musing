@@ -59,10 +59,10 @@ phases:
 #     discard-paths: no | yes
 #     file-format: report-format
 
-artifacts:
-  files:
-    - '**/*'
-  base-directory: ../simple-python-app
+# artifacts:
+#   files:
+#     - '**/*'
+#   base-directory: ../simple-python-app
 
 # cache:
 #   key: key
