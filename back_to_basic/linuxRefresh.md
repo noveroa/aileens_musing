@@ -81,4 +81,4 @@ Linux - Other
 | ------ | ------ |
 | find | 	search files/directories | 
 | tar | tar/archive into a tarball or extract tar -cvf {tar_name}.tar [files] |
-| '|' | the Pipe - combine 1+cmds by piping the output of one cmd tas the input for next cmd|
+|  \| | the Pipe - combine 1+cmds by piping the output of one cmd tas the input for next cmd|
