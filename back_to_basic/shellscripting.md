@@ -51,7 +51,8 @@ A variable name could contain any alphabet (a-z, A-Z), any digits (0-9), and an 
 `$HOME` = Stores user's home directory
 
 `$SHELL` = Stores the path to the shell program that is being used.
-~~~
+
+```sh
 #!
 var1="KnightOfNi"
 echo $var1
@@ -61,11 +62,11 @@ unset var1
 if [ -z $var1 ]; then
   echo "You unset it correctly"
 fi
-~~~
+```
 
 > A note on controls
 >> looping
-~~~
+```sh
 #/bin/bash
 while <condition>
 do
@@ -73,10 +74,10 @@ do
     <command 2>
     <etc>
 done
-~~~
+```
 
 >> if else then
-~~~
+```sh
 #/bin/bash
 if [ expression ]
 then
@@ -84,5 +85,5 @@ then
 else
    statement2
 fi
-~~~
+```
 
