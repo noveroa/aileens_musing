@@ -30,16 +30,15 @@ Let's go back to basics for another moment, Shell scripting ..
 * Design flaws 
 * Easy to cause a costly error
 
-~~~ x.sh
-
-
+```sh x.sh
 #!/bin/bash
-
 #
 echo "Back to basics ->  Bash tutorial: http://linuxconfig.org/Bash_scripting_Tutorial"
-~~~
+```
 ###### make sure to change permissions :) 
-~~~ chmod +x x.sh ~~~
+```sh
+chmod +x x.sh
+```
 
 __ 
 > A word about variables
