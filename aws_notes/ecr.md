@@ -84,3 +84,14 @@ As good practice, remember to clean up resources that you no longer need to avoi
 1. Make sure there are no images in the repository, or delete the images using `docker rmi` locally.
 2. Go to the AWS Management Console, navigate to the Amazon ECR service, and select your repository.
 3. Click on "Delete" and confirm the action.
+
+
+
+Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 343437023978.dkr.ecr.us-east-1.amazonaws.com
+Note: If you receive an error using the AWS CLI, make sure that you have the latest version of the AWS CLI and Docker installed.
+Build your Docker image using the following command. For information on building a Docker file from scratch see the instructions here . You can skip this step if your image is already built:
+docker build -t aileen_musings/ecr_demo .
+After the build completes, tag your image so you can push the image to this repository:
+docker tag aileen_musings/ecr_demo:latest 343437023978.dkr.ecr.us-east-1.amazonaws.com/aileen_musings/ecr_demo:latest
+Run the following command to push this image to your newly created AWS repository:
