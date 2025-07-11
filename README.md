@@ -16,3 +16,20 @@ ___
 | Email | [novero.a\@gmail.com](mailto:novero.a@gmail.com?subject=GitHunLinker)|
 | Phone | Contact Me Elsewhere  |
 | LinkedIn | [LinkedIn Me!](www.linkedin.com/in/anovero) |
+
+
+## dev - oper
+> embracing the culture of 
+* improving delivery
+* automation
+* quality
+* monitoring
+* testing
+
+# I think I am well architected too AWWS!  We can be twins!
+* Operational excellence
+* Security
+* Reliable
+* Cost Optimizater
+* Performant and Efficient
+* Sustainable
