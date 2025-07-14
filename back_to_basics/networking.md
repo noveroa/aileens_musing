@@ -47,17 +47,18 @@ But really, I just need a simple easy conversation and explanation.  Its not all
 
 
 > NETWORK --> Subnet(s) ---> CIDR Range
-if you need 256 ip addresses : 172.16.3.0/**24** , 192.16.2.0/**24**
+>
+>if you need 256 ip addresses : 172.16.3.0/**24** , 192.16.2.0/**24**
 
 ## 
 ___ 
 
-Linux - File and Directory management .. obvi... 
-
-|    | address range |
-| vpc | 172.16.0.0 -- 172.16.255.255 |
+|  module | address range |
+| -------- | ------- |
+| vpc | 172.16.0.0 - 172.16.255.255 |
 | subnet A | 172.16.3.4 |
 | cidr range | 172.16.3.0 / 24|
+
 * if i only need 256 addresses: 172.16.3.0 / 24
     * in this particular subnet, since each byte = 0-255, 
     * the first 3 bytes can be common.  So "discard 32"... 
