@@ -21,10 +21,10 @@ But really, I just need a simple easy conversation and explanation.  Its not all
 | |172.16.3.0/24|   |172.16.4.0/24|             |
 | ._____________.   ._____________.             |   
 |                                               |
-|          ._____________.   ._______________.  |
-|          |subnet3.     |   |subnet4.       |--|---> internet (via route tables/internet gateway)
-|          |172.16.80.0/24|  |172.16.244.0/24|  |
-|          ._____________.   ._______________.  |
+|         .______________.   ._______________.  |
+|         |subnet3.      |   |subnet4.       |--|---> internet (via route tables/internet gateway)
+|         |172.16.80.0/24|   |172.16.244.0/24|  |
+|         .______________.   ._______________.  |
 |                                               |
 .-----------------------------------------------.
 ```
@@ -69,5 +69,5 @@ ___
     * 2^1 = 2!  (ie 0, 1)
 
 __ 
-# Reources:
+# Resources:
 * [Youtube; Networking Concepts are Easy](https://www.youtube.com/watch?v=PhTn8RkF0F4)
