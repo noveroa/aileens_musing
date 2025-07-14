@@ -1,0 +1,51 @@
+
+Experienced platform engineer specializing in cloud infrastructure orchestration and optimization.
+
+I have spent the last 5-6 years developing an AWS-centric solution for a multi-account, multi region AWS Cloud platform for a top international biopharmaceutical company.  
+
+This platform was based on the integration of several methodologies and softwares including: Bash and Shell Scripting, AWS CDK/SDK, Terraform (specifically AWS Development for Terraform), NodeJs/Typescript, Python/Boto3.  We leveraged CI/CD pipelines through Docker, Bitbucket, and Jenkins for automated and controlled test and production environments.
+
+Per request for a review of my personal experience with certain services:
+
+
+Service
+Proficiency/Note
+Amazon CDK
+Advanced: 4-5 Years
+The AWS Toolkit was the tool that was the backbone of our infrastructure. It allowed for efficient and easy access to the aws resources and parameters of each service and coupled with Terraform provided a very manageable deployment setup across 500+ AWS Accounts in our AWS Organization.
+The toolkit provided the skeleton and schemas for the classes and models for the resources for the services deployed in our infrastructure and allowed for easy, sharable packages and engineer collaboration.
+Services leveraged were (and not limited to) : AWS Organization (including SCPs), Config, IAM (Roles, Policies, Groups),  Eventbridge, Cloudformation, Security Groups, EC2, KMS, GuardDuty…
+Terraform
+Advanced: 7-8 Years
+Starting with plain Terraform, I have also leveraged the AWS Terraform toolkits as a great collaborative and secure deployment infrastructure.
+A great resource to dependably deploy resources and modules in a predictable and clean manner (supporting multiple cloud providers). 
+Especially given to detail and security matters, terraform is a great way to organize and deploy between different profiles and environments with dynamic and static variables.
+We used it (via custom configuration files and shell scripts) to create automated deployments in different environments and staged levels of the accounts (ie core/global resources to account specific roles and services like lambda or security groups)
+AWS Lambda
+Proficient/Advanced: 4-5 Years
+As I was not a solely lambda developer (I have worked over the gamut of AWS native services since around 2017/1018), AWS Lambda and other serverless AWS resources were greatly used by myself and team.
+Using both Boto3/Python and AWS SDK with nodeJS/Typescript, I am experienced with lambda in multiple functions.
+I helped as an operations level resource with various scientists at my company to help with configuring and writing the scripts and functions (integrating with IAm, Eventbridge, SQS, SNS etc etc).
+In developing, Lambda was an obvious tool to allow for both reactive and proactive security controls and monitoring (as integrated with Cloudtrail and Eventbridge).  Cronjobs kicked off by Jenkins were also scripted to execute lambdas.
+CI/CD principles and tools
+Proficient/Advanced: 4-5 Years
+A means to monitor in a very methodical way changes in the source code that allow for efficient and  digestible collaboration.  At each change one can build, test, and monitor for any breaking changes and how a change affects the overall pipeline in set stages and then either deploy or not to the various environments being managed.
+
+It (I think) is a hallmark of a collaborative team and allows for faster deployment cycles simply due to the ability to find bugs or breaking changes at each interval.
+
+Jenkins is the toolkit I am most comfortable with. Though I can see the use of GitLab as a great asset as well.
+Scripting Languages (Python/Bash)
+Proficient/Advanced: 8-10 Years
+I began my Computer Science journey with python (at that point I barely knew of libraries and wrote MI algorithms from scratch in the terminal!).  I have been using more nodeJs/Typescript in most recent years, though Python has always been a quick tool for one off scripts for a quick task.
+
+Bash and shell scripting are also in my toolbox quite regularly as a devops engineer.  It is an important language for writing deployment scripts and basic bootstraps.  
+Other Language Experience (Typescript, Powershell, .NET, Java)
+
+
+Proficient: 5-6 Years
+I have a gamut of languages and experiences through the years.  
+The final platform developed at my last position started with bash/python/terraform and evolved to using primarily Typescripting with nodeJs and npm/lerna.   This allowed for a more disciplined methodology for ensuring that as the team changed and the requirements and number of accounts scaled we had stricter control and error checking essentially built in.
+
+(To note other methodologies and resources I am comfortable with: Agile Scrum, Jira, Atlassian Tools (ie Confluence/Sharepoint), Git/Bitbucket, Jenkins, Microsoft Teams, Slack.)
+
+
