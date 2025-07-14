@@ -29,6 +29,8 @@ Routes dictate how network traffic is directed, specifying the destination and n
 ### Route Tables
 
 Route Tables are collections of routes associated with subnets, enabling custom routing rules.
+_________________________________
+
 
 ## Network Security Groups (NSGs)
 
@@ -39,6 +41,7 @@ NSGs are fundamental for Azure's network security, allowing filtering of inbound
 - **Default Rules**: NSGs have default rules for controlling traffic within the Virtual Network and between subnets.
 
 - **Association**: NSGs can be associated with subnets or individual network interfaces.
+
 
 ## Application Security Groups (ASGs)
 
