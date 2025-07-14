@@ -144,14 +144,14 @@ spec:
 1. **Add the Helm repo:**
 
    ```bash
-   helm repo add myrepo https://username.github.io/helm-repo
+   helm repo add novero_test https://github.com/noveroa/aileens_musing/tree/main/helm_kubernetes/helm_example
    helm repo update
    ```
 
 2. **Search for charts:**
 
    ```bash
-   helm search repo myrepo
+   helm search repo novero_test
    ```
 
 3. **Install a service (e.g., payments):**
