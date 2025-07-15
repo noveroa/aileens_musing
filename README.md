@@ -26,7 +26,7 @@ ___
 * monitoring
 * testing
 
-# I think I am well architected too AWWS!  We can be twins!
+# I think I am well architected too AWS!  We can be twins!
 * Operational excellence
 * Security
 * Reliable
