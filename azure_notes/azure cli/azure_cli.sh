@@ -44,5 +44,28 @@ az vm wait --name $MY_VM_NAME --resource-group $MY_RESOURCE_GROUP_NAME --created
 export IP_ADDRESS=$(az vm show --show-details --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --query publicIps --output tsv)
 
 echo "My ip" $IP_ADDRESS
+
+echo "create with a template!"
+az deployment group create --resource-group $MY_RESOURCE_GROUP_NAME --template-file 01-create-vm.json
+
+az vm wait --name demo_cli_template --resource-group $MY_RESOURCE_GROUP_NAME --created 
+export IP_ADDRESS=$(az vm show --show-details --resource-group $MY_RESOURCE_GROUP_NAME --name demo_cli_template --query publicIps --output tsv)
+
+echo "My ip" $IP_ADDRESS
 echo "now delete"
 az group delete --name $MY_RESOURCE_GROUP_NAME --yes
+
+
+# other resource:
+
+# ### Installation Overview
+# https://learn.microsoft.com/en-us/cli/azure/install-azure-cli
+
+# ### Install on Windows
+# https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
+
+# ### Install on Linux
+# https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt
+
+# ### Install on Mac
+# https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos
