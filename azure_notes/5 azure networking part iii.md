@@ -3,6 +3,10 @@
 ### What is the difference between NSG and ASG ?
 ASGs are applied to VMs and are used in conjunction with NSGs. By associating an ASG tag with a network security rule, you can define rules that apply to a group of VMs sharing the same tag.
 ASGs simplify the management of security rules in a multi-tier application by grouping VMs that belong to the same application tier. This makes it easier to apply and manage security policies for a specific application.
+(different from AWS NACL/SG! )
+* NSGs act as firewalls at the subnet or network interface level, controlling inbound and outbound traffic based on rules. 
+* ASGs, on the other hand, are logical groupings of virtual machines (VMs) that simplify security rule management within NSGs. 
+    * ie, ASGs allow you to apply NSG rules based on application-level considerations rather than individual IP addresses. 
 
 ### How can you block the access to a your vm from a subnet ?
 By default traffic is allowed between subnets with in the VNet in Azure. This is because of a default NSG rule “AllowVnetInBound”. 
