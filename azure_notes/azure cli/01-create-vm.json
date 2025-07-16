@@ -25,6 +25,8 @@
         "networkSecurityGroupName2": "[concat(variables('prefix'), '-', '2')]",
         "vNetName": "vnet",
         "vNetSubnetName" : "novero_subnet",
+        "vNetAddressPrefixes" : "172.16.255.0/29",
+        "vNetSubnetAddressPrefix": "172.16.255.0/29",
         "networkInterfaceName": "[concat(variables('prefix'), '-', 'interface')]"
     },
     "resources": [
@@ -87,34 +89,31 @@
                     }
                 ]
             }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2024-03-01",
+            "name": "[variables('vNetName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('vNetAddressPrefixes')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('vNetSubnetName')]",
+                        "properties": {
+                            "addressPrefix": "[variables('vNetSubnetAddressPrefix')]",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName2'))]"
+                            }
+                        }
+                    }
+                ]
+            }
         }
-        // {
-        //     "type": "Microsoft.Network/virtualNetworks",
-        //     "apiVersion": "2024-03-01",
-        //     "name": "[variables('vNetName')]",
-        //     "location": "[parameters('location')]",
-        //     "dependsOn": [
-        //         "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName2'))]"
-        //     ],
-        //     "properties": {
-        //         "addressSpace": {
-        //             "addressPrefixes": [
-        //                 "[variables('prefix')]"
-        //             ]
-        //         },
-        //         "subnets": [
-        //             {
-        //                 "name": "[variables('vNetSubnetName')]",
-        //                 "properties": {
-        //                     "addressPrefix": "[variables('prefix')]",
-        //                     "networkSecurityGroup": {
-        //                         "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName2'))]"
-        //                     }
-        //                 }
-        //             }
-        //         ]
-        //     }
-        // }
         // {
         //     "type": "Microsoft.Network/networkInterfaces",
         //     "apiVersion": "2024-03-01",
