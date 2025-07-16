@@ -23,6 +23,9 @@ export MY_VM_IMAGE="Canonical:0001-com-ubuntu-minimal-jammy:minimal-22_04-lts-ge
 echo "Creating the resource group"
 az group create --name $MY_RESOURCE_GROUP_NAME --location $REGION
 
+echo "create storage with ARM with a template!"
+az deployment group create --resource-group $MY_RESOURCE_GROUP_NAME --template-file 01-storage-account.json 
+
 echo "creating vm"
 # make sure the size is available (both location and subscription)
 #  az vm list-skus --location eastus --resource-type virtualMachines --zone --all --output tab
@@ -52,9 +55,6 @@ az vm wait --name demo_cli_template --resource-group $MY_RESOURCE_GROUP_NAME --c
 export IP_ADDRESS=$(az vm show --show-details --resource-group $MY_RESOURCE_GROUP_NAME --name demo_cli_template --query publicIps --output tsv)
 
 echo "My ip" $IP_ADDRESS
-
-echo "create storage with ARM with a template!"
-az deployment group create --resource-group $MY_RESOURCE_GROUP_NAME --template-file 01-storage-account.json 
 
 echo "now delete"
 az group delete --name $MY_RESOURCE_GROUP_NAME --yes
