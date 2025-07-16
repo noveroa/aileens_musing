@@ -7,6 +7,8 @@
 
 _NOTE BICEP  Bicep that offers the same capabilities as ARM templates but with a syntax that's easier to use. Each Bicep file is automatically converted to an ARM template during deployment_
 
+**VScode extension is niiiice**
+
 ```sh
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
@@ -36,8 +38,8 @@ _NOTE BICEP  Bicep that offers the same capabilities as ARM templates but with a
 ### Create resource group if it does not exist 
 
 ```sh
-az group create --name vscode --location 'Central US'
+az group create --name X --location X
 
 ### Create virtual machine
-az deployment group create --resource-group vscode --template-file 01-create-vm.json
+az deployment group create --resource-group X --template-file X 
 ```

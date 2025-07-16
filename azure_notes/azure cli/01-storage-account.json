@@ -1,22 +1,66 @@
-{
+{ // a single resource example - storage  - simple 
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "location": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().location]",
+            "metadata": {
+                "description": "Location for the Azure Storage Account"
+            }
+        },
+        "storageKind": {
+            "type": "string",
+            "defaultValue": "StorageV2",
+            "metadata": {
+                "description": "StorageKind"
+            }
+
+        },
+        "storageAccountTier": {
+            "type": "string",
+            "metadata": {
+                "description": "allowed valuesfor the storage tier"
+            },
+            "defaultValue": "Standard",
+            "allowedValues": [
+                "Standard",
+                "Premium"
+            ]
+        },
+        "skuName": {
+            "type": "string",
+            "metadata": {
+                    "description": "SKU name for the storage account"
+            },
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Standard_LRS",
+                "Standard_GRS",
+                "Standard_RAGRS",
+                "Standard_ZRS",
+                "Premium_LRS",
+                "Premium_ZRS"
+            ]
+        }
+    },
     "functions": [],
-    "variables": {},
+    "variables": {
+        "resourceName" : "novero11222"
+    },
     "resources": [
         {
-            "name": "abhioshekveeramalla11232",
+            "name": "[variables('resourceName')]",
             "type": "Microsoft.Storage/storageAccounts",
-            "apiVersion": "2023-01-01",
+            "apiVersion": "2023-05-01",
             "tags": {
-                "displayName": "abhioshekveeramalla11232"
+                "displayName": "[variables('resourceName')]"
             },
-            "location": "[resourceGroup().location]",
-            "kind": "StorageV2",
+            "location": "[parameters('location')]",//"[resourceGroup().location]",
+            "kind": "[parameters('storageKind')]",
             "sku": {
-                "name": "Premium_LRS",
-                "tier": "Premium"
+                "name": "[parameters('skuName')]",
+                "tier": "[parameters('storageAccountTier')]"
             }
         }
     ],

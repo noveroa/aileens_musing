@@ -52,6 +52,10 @@ az vm wait --name demo_cli_template --resource-group $MY_RESOURCE_GROUP_NAME --c
 export IP_ADDRESS=$(az vm show --show-details --resource-group $MY_RESOURCE_GROUP_NAME --name demo_cli_template --query publicIps --output tsv)
 
 echo "My ip" $IP_ADDRESS
+
+echo "create storage with ARM with a template!"
+az deployment group create --resource-group $MY_RESOURCE_GROUP_NAME --template-file 01-storage-account.json 
+
 echo "now delete"
 az group delete --name $MY_RESOURCE_GROUP_NAME --yes
 
