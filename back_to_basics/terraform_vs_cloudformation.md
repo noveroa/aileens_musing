@@ -8,7 +8,7 @@
 Terraform vs Cloudformation ... you know where i stand
 
 
-# terraform (open tofu?)
+# terraform (open tofu?????)
 * open source
 * cloud / operations agnostic
 * dynamic resource creation 

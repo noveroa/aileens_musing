@@ -9,7 +9,7 @@
 ###### 
 So obviously, containers are a significant concept to understand and thus ...
 
-But when asked "What is a container?"  Do you freeze... I'm like. Its the package that standalone of your application ready to be shipped (duh, the name, docker and container!) and *ensures that no matter where it is shipped/deployed it will run the same regardless*...
+But when asked "What is a container?"  Do you freeze... I'm like... Its the package that is a standalone of your application ready to be shipped (duh, the name, docker and container!) and *ensures that no matter where it is shipped/deployed it will run the same regardless*...
 
   But, probably not the most elegant way to answer...
 
@@ -36,7 +36,7 @@ But when asked "What is a container?"  Do you freeze... I'm like. Its the packag
     * Offers tools to build, run, and manage containers.
     * Uses a Dockerfile to define how an image is built.
 * Container Orchestration
-    * Tools to manage large numbers of containers (ie Kubernetes)
+    * Tools to manage large numbers of containers (ie Kubernetes; DockerSwarm)
         * Scaling
         * Load balancing
         * Rolling updates

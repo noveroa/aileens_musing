@@ -6,7 +6,8 @@
 
 ###### 
 
-A pipeline, in general, is a set of automated tasks/processes defined and followed by the software engineering team. DevOps pipeline is a pipeline which allows the DevOps engineers and the software developers to efficiently and reliably compile, build and deploy the software code to the production environments in a hassle free manner.
+A pipeline, in general, is a set of automated tasks/processes defined and followed by the software engineering team. 
+DevOps pipeline is a pipeline which allows the DevOps engineers and the software developers to efficiently and reliably compile, build and deploy the software code to the production environments in a hassle free manner.
 
 ie. Jenkins pipeline:
 

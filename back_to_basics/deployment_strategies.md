@@ -16,7 +16,7 @@ ___
 * Minimal disruptions for users during updates of software
 * Pre-live testing and validation
 * Consistent performance
-# not so benficial?
+# not so beneficial?
 * COST - have to maintain infrastructure for two environments
 * longer deployment times (rerouting traffic)
 * more complex configuration/set up (when compared to Ci/Cd)
@@ -44,7 +44,7 @@ Source: Code is pushed to a version control system (e.g., GitHub).
 * automated testing/validation
 * easier/ faster rollbacks
 # CI/CD drawback?
-* higher rik of downtime/deployment errors
+* higher risk of downtime/deployment errors
 * potential loss of versions
 * limited pre-live testing (compared to BG)
 * inconsistent performance/reliability during updates
