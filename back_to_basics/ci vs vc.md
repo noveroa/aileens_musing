@@ -8,7 +8,6 @@
 Case: Continuous Deployment v Continuous Delivery
 
 | Continuous Deployment | 	Continuous Delivery|
-|  module | address range |
 | -------- | ------- |
 |The deployment to the production environment is fully automated and does not require manual-human intervention| some amount of manual intervention (ie. manager’s approval)or deployment to a production environment.|
 | App run by via automated set of instructions, and no approvals are needed.|	Application depends on the decision of the team.|
