@@ -86,4 +86,4 @@
         - Each management group and subscription can support only one parent.
         ```
     * Managment Groups -> Subscriptions -> Resource Groups -> Resources
-        ![alt text](image.png)
+        ![alt text](./images/image.png)
