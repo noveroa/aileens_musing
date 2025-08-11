@@ -1,0 +1,57 @@
+# deployment.yaml
+apiVersion: app/v1
+kind: Deployment
+metadata: 
+  name: contoso-website # the name of the deployment used to identify when using kubectl
+spec:
+  selector: # Define the wrapping strategy
+    matchLabels: # Match all pods with the defined labels
+      app: contoso-website # Labels follow the `name: value` template
+  template: # tempalte for the pod/s inside a deployment
+    metadata: # metadata for the pod
+      labels:
+        app: contoso-website # Pods don't use the same names as the deployments. The pod's name is a mix of the deployment's name with a random ID added to the end; note _labels_ key this allows to find/group pods
+    spec: 
+      containers: #define the 1+ container within the pod 
+      - image: mcr.microsoft.com/mslearn/samples/contoso-website
+        name: contoso-website # an array as a pod can have 1+ containers
+        resources: 
+          requests: #Min/Max
+            cpu: 100m
+            memory: 128Mi
+          limits: 
+            cpu: 250m
+            memory: 256Mi
+        ports: # an array to expose the container exposes
+        - containerPort: 80 
+          name: http
+
+# # deployment.yaml
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: contoso-website
+# spec:
+#   selector: # Define the wrapping strategy
+#     matchLabels: # Match all pods with the defined labels
+#       app: contoso-website # Labels follow the `name: value` template
+#   template: # This is the template of the pod inside the deployment
+#     metadata:
+#       labels:
+#         app: contoso-website
+#     spec:
+#       nodeSelector:
+#         kubernetes.io/os: linux
+#       containers:
+#         - image: mcr.microsoft.com/mslearn/samples/contoso-website
+#           name: contoso-website
+#           resources:
+#             requests:
+#               cpu: 100m
+#               memory: 128Mi
+#             limits:
+#               cpu: 250m
+#               memory: 256Mi
+#           ports:
+#             - containerPort: 80
+#               name: http
