@@ -17,6 +17,7 @@ Module Directory
     terraform init
     terraform plan -var-file=development.tfvars
     terraform apply -var-file=development.tfvars
+    terraform destroy -var-file=development.tfvars
 
 ```
 
