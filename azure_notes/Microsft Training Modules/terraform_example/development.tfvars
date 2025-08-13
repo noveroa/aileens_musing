@@ -1,4 +1,4 @@
-location = "westus2"
+location = "eastus"
 prefix = dev
 virtual_network_cidr = "10.1.0.0/22"
 tags = {
