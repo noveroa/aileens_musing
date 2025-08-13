@@ -2,3 +2,7 @@
 *NYTimes*
 *.css
 *.bootstrap*
+*.terraform/
+*.log
+*.tfstate*
+*.terraform.lock*
