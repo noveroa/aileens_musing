@@ -1,9 +1,9 @@
 module "avm-res-resources-resourcegroup" {
-  source  = "Azure/avm-res-resources-resourcegroup/azurerm"
-  version = "0.2.1"
-  name = "${var.name_prefix}-rg1"
+  source   = "Azure/avm-res-resources-resourcegroup/azurerm"
+  version  = "0.2.1"
+  name     = "${var.name_prefix}-rg1"
   location = var.location
-  tags = var.tags
+  tags     = var.tags
 }
 
 # resource "azurerm_resource_group" "example" {
@@ -74,8 +74,8 @@ module "avm-res-network-natgateway" {
 }
 
 module "avm-res-network-networksecuritygroup" {
-  source  = "Azure/avm-res-network-networksecuritygroup/azurerm"
-  version = "0.4.0"
+  source              = "Azure/avm-res-network-networksecuritygroup/azurerm"
+  version             = "0.4.0"
   resource_group_name = module.avm-res-resources-resourcegroup.name
   name                = "${var.name_prefix}-vm-subnet-nsg"
   location            = module.avm-res-resources-resourcegroup.resource.location
@@ -109,7 +109,7 @@ module "avm-res-network-virtualnetwork" {
     subnet0 = {
       name                            = "${var.name_prefix}-vm-subnet"
       default_outbound_access_enabled = false
-      address_prefixes = [cidrsubnet(var.virtual_network_cidr, 1, 0)]
+      address_prefixes                = [cidrsubnet(var.virtual_network_cidr, 1, 0)]
       nat_gateway = {
         id = module.avm-res-network-natgateway.resource_id
       }
@@ -120,7 +120,7 @@ module "avm-res-network-virtualnetwork" {
     bastion = {
       name                            = "AzureBastionSubnet"
       default_outbound_access_enabled = false
-      address_prefixes = [cidrsubnet(var.virtual_network_cidr, 1, 1)]
+      address_prefixes                = [cidrsubnet(var.virtual_network_cidr, 1, 1)]
     }
   }
 
@@ -194,11 +194,11 @@ module "avm-res-compute-virtualmachine" {
 }
 
 output "resource_group_name" {
-  value =  module.avm-res-resources-resourcegroup.name
+  value       = module.avm-res-resources-resourcegroup.name
   description = "The resource group name where the resources are deployed"
 }
 
 output "virtual_machine_name" {
-    value = module.avm-res-compute-virtualmachine.name
-    description = "The name of the virtual machine"
+  value       = module.avm-res-compute-virtualmachine.name
+  description = "The name of the virtual machine"
 }
