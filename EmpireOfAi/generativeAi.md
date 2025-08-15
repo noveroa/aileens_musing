@@ -1,4 +1,4 @@
-# Microsoft and Generative AI Fundamentals
+
 > There's no wizardry involved in generative AI – just the application of mathematical techniques incrementally discovered and refined over many years of research into statistics, data science, and machine learning. 
 
 
