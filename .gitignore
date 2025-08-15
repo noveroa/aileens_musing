@@ -7,3 +7,4 @@
 *.tfstate*
 *.terraform.lock*
 *__pycache__*
+settings.json
