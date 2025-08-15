@@ -7,6 +7,7 @@
 ###### 
 > remember that i did machine learning and nlp... yeah, a while back now huh?  let's see if i can recall anything... 
 
+check out : [llm configs](https://llmconfig.org/)
 ######
 
 * Large Language models (LLMs)
