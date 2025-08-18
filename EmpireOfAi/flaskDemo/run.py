@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
 from config import Config
-from chatgptmodel import model
+from functions.chatgptmodel import model
 
 def create_app(config_class=Config):
     app = Flask(__name__)

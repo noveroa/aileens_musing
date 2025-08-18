@@ -8,3 +8,4 @@
 *.terraform.lock*
 *__pycache__*
 settings.json
+*EmpireOfAi/flaskDemo/genAiEnv/*

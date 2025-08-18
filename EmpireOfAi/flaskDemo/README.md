@@ -19,17 +19,23 @@ http://127.0.0.1:8080/
 
 http://127.0.0.1:8080/test
 * its working
-http://127.0.0.1:8080/testGenerate
+http://127.0.0.1:8080/generateTest
 * runs chatgpt with input text Once upon a time
 http://127.0.0.1:88080...
+* prompt your own story 
+http://127.0.0.1:8880/storyPrompt
 
 flaskDemo/
 ├── genAiEnv/             # Python virtual environment
 ├── Makefile              # Set of instructions for maketo build project
+
 ├──                  # Main application package
 │   ├── __init__.py       # Initializes the Flask app and registers blueprints
 │   ├── run.py            # Entry point to run the application; where blueprints are registered
 │   │   └── ...
+│   ├── functions/        # helpers, models, functions...
+│   │   ├── __init__.py         
+│   │   ├── chatgptmodel.py     # basic tutorial model
 │   ├── main/             # Main
 │   │   ├── __init__.py         
 │   │   ├── auth.py             # initial auth work
