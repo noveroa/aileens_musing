@@ -3,6 +3,7 @@
 *.css
 *.bootstrap*
 *.terraform/
+*.terragrunt-*
 *.log
 *.tfstate*
 *.terraform.lock*
