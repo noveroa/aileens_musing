@@ -13,3 +13,9 @@ ie.
 ```sh
 terragrunt run --all apply
 ```
+
+
+Terragrunt is a thin wrapper that provides extra tools for keeping your configurations DRY, working with multiple Terraform modules, and managing remote state.
+
+Atlantis is an application for automating Terraform via pull requests. It is deployed as a standalone application into your infrastructure. No third-party has access to your credentials. Atlantis listens for GitHub, GitLab or Bitbucket webhooks about Terraform pull requests.
+
