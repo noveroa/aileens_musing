@@ -14,7 +14,7 @@ otherwise, I will be the one who ate the scones.
 
 #### references:
 (kubernetes conventions)[https://kubernetes.io/docs/reference/kubectl/conventions/]
-(kubernetes referebce)[https://kubernetes.io/docs/reference/]
-
+(kubernetes reference)[https://kubernetes.io/docs/reference/]
+(kodekloud reference)[https://github.com/kodekloudhub/certified-kubernetes-administrator-course]
 ## 
 ___ 
