@@ -3,6 +3,15 @@
 
 ![N|Solid](https://ca.slack-edge.com/T0495HV8H-U01AM69UW3E-ae635702c574-72)
 
+
+###### uh like man pages?!
+
+```kubectl label --help```
+...
+Update the labels on a resource.
+
+```
+
 ###### common flags
 `--dry-run`: By default as soon as the command is run, the resource will be created. 
 `--dry-run=client`:  This will not create the resource, instead, tell you whether the resource can be created and if your command is right.
@@ -57,3 +66,7 @@ Or
 
 _Both the above commands have their own challenges. While one of it cannot accept a selector the other cannot accept a node port. I would recommend going with the kubectl expose command. If you need to specify a node port, generate a definition file using the same command and manually input the nodeport before creating the service._
 
+> list out specific fields
+``` kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<node-name>```
+
+    kubectl get pods  -o wide --field-selector spec.nodeName=node01
