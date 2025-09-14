@@ -16,7 +16,7 @@ Update the labels on a resource.
 `--dry-run`: By default as soon as the command is run, the resource will be created. 
 `--dry-run=client`:  This will not create the resource, instead, tell you whether the resource can be created and if your command is right.
 `-o yaml`: This will output the resource definition in YAML format on screen.
-
+`kubectl get pod <pod-name> -o yaml > <output-file-name>.yaml`
 
 ###### Create an (NGINX) Pod
 
