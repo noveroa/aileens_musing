@@ -63,5 +63,49 @@ leaderElection:
                 containers:
                 - name: mypod
                   image: nginx
-                dchedulerName: my-custom-scheduler
+                schedulerName: my-custom-scheduler
             ```
+* Configuring Schedulers - Scheduler Profiles
+    * Scheduling Queue
+        * PrioritySort Plugin
+        * as pods are created, they go to the scheduling queue, waiting to be scheduled; they are sorted based on priority as defined by the pod.
+    * Filter Phase
+        * Node ResourceFit, NodeName, NodeUnschedulable 
+        * Nodes that cannot run the pod are filtered out, ie those without sufficient resources
+    * Scoring Phase
+        * NodeResourcesFit plugin, ImageLocality
+        * scheduler associates a score to each node based on the free space that it will have after reserving the CPU required for that pod.
+    * Binding Phase
+        * Defaultplugin
+        * pod is bound to the node with the higher weighted score
+
+    * You can use extension points to write and customize your own plugins for each phase affecting the scheduling
+
+* SchedulerProfiles
+    * havingin multiple different schedulers can lead to race conditions and harder maintainence (each having own binary)
+    * instead A single scheduler can support multiple profiles in the configuration file.
+    * to configure the schedulers differently, under each scheduler profile, configure the plugins the way we want to.
+
+    ```my-scheduler-config.yaml
+    apiVersion: kubescheduler.config.k8s.io/v1
+    kind: KubeSchedulerConfiguration
+    profiles:
+    - schedulerName: my-scheduler-2
+      plugins:
+        score:
+          disabled: 
+          - name: TaintToleration
+          enabled:
+          - name: MyCustomPlugin1
+          - name: MyCustomPlugin2
+    - schedulerName: my-scheduler-3
+      plugins:
+        preScore:
+          disabled: 
+          - name: "*"
+        score:
+          disabled:
+          - name: "*"
+    - schedulerName: my-scheduler-4
+
+    ```
