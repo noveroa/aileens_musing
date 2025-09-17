@@ -16,5 +16,8 @@ otherwise, I will be the one who ate the scones.
 (kubernetes conventions)[https://kubernetes.io/docs/reference/kubectl/conventions/]
 (kubernetes reference)[https://kubernetes.io/docs/reference/]
 (kodekloud reference)[https://github.com/kodekloudhub/certified-kubernetes-administrator-course]
+(kubernetes-api)[https://kubernetes.io/docs/concepts/overview/kubernetes-api/]
+(api-conventions)[https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md]
+(api-changes)[https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api_changes.md]
 ## 
 ___ 
