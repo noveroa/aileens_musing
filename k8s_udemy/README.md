@@ -10,8 +10,6 @@
 
 I need to start re-recoding my kubernetes overviews... but sometimes thinking about it i feel i knowless.   but let's jot down a few notes and see where that leads us?
 
-otherwise, I will be the one who ate the scones.
-
 #### references:
 (kubernetes conventions)[https://kubernetes.io/docs/reference/kubectl/conventions/]
 (kubernetes reference)[https://kubernetes.io/docs/reference/]
